@@ -20,7 +20,7 @@ class Polinômio:
         termos_tupla = tuple(termos_novos)
         return Polinômio(termos_tupla)
 funcao = Polinômio((14,-6,7,-3,-7,3))
-derivada = funcao.derivada()
+derivada = funcao.derivada() 
 precisao = 10**-6
 
 def newton(x_k:float, funcao, derivada, precisao:float,valor_exato:float,k=0,parada=False):
@@ -34,7 +34,7 @@ def write_top_newton(file):
     file.write(f'| k |'+' '*4+'x_k'+' '*4+'|'+' '*3+'f(x_k)'+' '*2+'|'+' '*3+"f'(x_k)"+' '*2+'|'+' '*4+'e_k'+' '*4+'|\n')
     file.write('¨'*53+'\n')
 def write_data_newton(file,k,x,fx,f_x,e):
-    #arrendondar para 8 casas decimais
+    #arrendondar para 8 casas decimais .
     x,fx,f_x,e = round(x,8),round(fx,8),round(f_x,8),round(e,8)
     file.write(f'|{k:03}|'+f'{x:.9f}|'+f'{fx:+.8f}|'+f'{f_x:+.8f}|'+f'{e:.9f}|\n')
 
